@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,43 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <title>Shop project</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<header class="header">header</header>
-<main class="main">main</main>
-<footer class="footer">footer</footer>
+    <header class="header">
+        <!-- задача класу container розташувати рамки, зафіксувати все по центру: -->
+        <div class="container">
+              <!--задача класу row відміняти обтікання бо далі ідуть колонки через float а він для них буде батьківський елемент  -->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <a href="" >
+                            <img src="images/logo (3).png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <nav>
+                        <!-- ul.menu>li*4>a -->
+                        <ul class="menu">
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Products</a></li>
+                            <li><a href="">Payment</a></li>
+                            <li><a href="">Shipping</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="col-md-3">Serch</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">main</main>
+    <footer class="footer">footer</footer>
 </body>
+
 </html>

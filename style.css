@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* Підключаємо шрифт */
+    font-family: 'Roboto', sans-serif;
+
+    /* Додаємо фонову картинку */
+    background-image: url(images/patt.png);
+    /* Ця картинка займає увесь простір нашого екрану. Якщо потрібно тільки в якомусь місці чи тільки по якійсь осі то:
+    background-repeat: no-repeat;
+    background-repeat:repeat-x;
+    background-position: 100px 50px;
+    */
+}
+
+.header {
+    background-color: rgba(255, 255, 255, 0.75);
+    /* задамо внутрішній відступ щоби header збільшити */
+    padding: 25px;
+}
+
+.container {
+    width: 1200px;
+    /* розташуємо цей контейнер по центру */
+    margin: 0 auto;
+
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Задаємо для rov від'ємне значення margin щоб цей відступ не був 30px */
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+/* Прописуємо скільки % ширини займають наші колонки */
+.col-md-3 {
+    width: 25%;
+}
+
+.col-md-6 {
+    width: 50%;
+}
+
+/* Напишемо правило: якщо зустрінеться class з атрибутом col- то задати float-left, padding-left і padding-right   */
+[class*="col-"] {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Задаємо псевдоклас after для row щоб вони не розташовувались float:left.
+Після доповнення додаємо ще menu */
+.row::after,.menu::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.logo {
+    margin-top: 7px;
+}
+
+.menu li {
+    float: left;
+    /* є 4 рівні блоки тому ширина 25% */
+    width: 25%;
+    border-left: 1px solid #2c71b8;
+}
+
+/* задамо рамку для останньої колонки li справа */
+.menu li:last-child {
+    border-right: 1px solid #2c71b8;
+}
+
+.menu a {
+    display: block;
+    height: 50px;
+    text-decoration: none;
+    color: #2c71b8;
+    text-align: center;
+    line-height: 50px;
+
+    /* Текст на макеті light 21px, тому */
+    font-weight: 300;
+    font-size: 21px;
+}
+
+.menu a:hover {
+    background-color: #2c71b8;
+    color: white;
+}
