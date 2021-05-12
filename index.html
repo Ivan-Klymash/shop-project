@@ -14,7 +14,7 @@
 
 <body>
     <header class="header">
-        <!-- задача класу container розташувати рамки, зафіксувати все по центру: -->
+        <!-- задача класу container розташувати рамки, зафіксувати все по центру (щоб шапка не йшла на всю ширину) : -->
         <div class="container">
               <!--задача класу row відміняти обтікання бо далі ідуть колонки через float а він для них буде батьківський елемент  -->
             <div class="row">
@@ -31,14 +31,42 @@
                         <!-- ul.menu>li*4>a -->
                         <ul class="menu">
                             <li><a href="">Home</a></li>
-                            <li><a href="">Products</a></li>
+                            <li><a href="" class="products">
+                                     Products
+                                        <img class="arrow-down" src="images/arrow_down.png" alt="">
+                                </a>
+                                <ul class="submenu">
+                                    <li>  laptop</li>
+                                    <li>  tablet</li>
+                                    <li>  cellphone</li>
+                                    <li> eBook</li>
+                                     <li>  TV</li>
+                                    <li>  earphones</li>
+                                    <li>  smart watch</li>
+                                </ul>
+                            </li>
                             <li><a href="">Payment</a></li>
                             <li><a href="">Shipping</a></li>
                         </ul>
                     </nav>
                 </div>
 
-                <div class="col-md-3">Serch</div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <!-- створюємо під пошук і корзину умовні 2 колонки. col-md-9 умовно означає що ця колонка займатиме 75% ширини, col-md-3 25% ширини. -->
+                        <div class="col-md-9">
+                            <form class="form-search">
+                                <input type="text" placeholder="search">
+                                <button class="button"> </button>
+                            </form>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="cart">
+                                <div class="product-count">0</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </header>

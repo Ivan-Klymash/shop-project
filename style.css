@@ -45,6 +45,10 @@ body {
     width: 50%;
 }
 
+.col-md-9 {
+    width: 230px;
+}
+
 /* Напишемо правило: якщо зустрінеться class з атрибутом col- то задати float-left, padding-left і padding-right   */
 [class*="col-"] {
     float: left;
@@ -52,8 +56,6 @@ body {
     padding-right: 15px;
 }
 
-/* Задаємо псевдоклас after для row щоб вони не розташовувались float:left.
-Після доповнення додаємо ще menu */
 .row::after,.menu::after {
     content: "";
     clear: both;
@@ -69,6 +71,7 @@ body {
     /* є 4 рівні блоки тому ширина 25% */
     width: 25%;
     border-left: 1px solid #2c71b8;
+    position: relative;
 }
 
 /* задамо рамку для останньої колонки li справа */
@@ -83,13 +86,136 @@ body {
     color: #2c71b8;
     text-align: center;
     line-height: 50px;
-
     /* Текст на макеті light 21px, тому */
     font-weight: 300;
     font-size: 21px;
 }
 
+/* псевдостан :hover відповідає за зміну фону і кольору тексту тільки при наведенні на елемент до якого він застосовується */
 .menu a:hover {
     background-color: #2c71b8;
     color: white;
+}
+
+.form-search {
+    border: 1px solid #2c71b8;
+    margin-top: 5px;
+    padding: 4px;
+    height: 38px;
+    line-height: 24px;
+    position: relative;
+}
+
+.form-search input {
+    /* забираємо рамку у input */
+    border: none;
+    /* забираємо білий колір фону у input */
+    background: transparent;
+    font-family: 'Roboto', sans-serif;
+    height: 21px;
+    width: 160px;
+    margin-top: 6px;
+    font-weight: 300;
+}
+
+/* щоб забрати внутрішню рамку яка появляється коли ми клікаємо на поле введення input використовуємо псевдоелемент :focus */
+.form-search input:focus {
+    outline: none;
+}
+
+/* стилізуємо поле для введення тексту placeholder */
+input::placeholder {
+    color: #2c71b8;
+    font-size: 21px;
+}
+
+.button {
+    width: 30px;
+    height: 30px;
+    background-color: #2c71b8;
+    background-image: url(images/search\ \(4\).png);
+    background-repeat: no-repeat;
+    /* задаємо місце де саме фонова картинка буде розташована (можна  значення в px зліва задати і зверху щоб була по центру: backround-position left 15px top 15px)  */
+    background-position: center;
+    border: none;
+    margin: 4px;
+    position: absolute;
+    top: -1px;
+    left: 161px;
+}
+
+.cart {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    background-image: url(images/cart\ blue\ \(1\).png);
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    position: relative;
+    margin-left: 230px;
+    bottom: 40px;
+    border: none;
+}
+
+.product-count {
+    width: 20px;
+    height: 20px;
+    background-color: #2c71b8;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+.menu li > .submenu li {
+    width: 286px;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+  }
+
+.submenu {
+    background-color: #2c71b8;
+    position: absolute;
+    left: -1px;
+    padding-top: 18px;
+    font-weight: 300;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.submenu li {
+    color: white;
+    font-size: 21px;
+    padding-left: 32px;
+}
+
+.menu li:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* при :hover на li стилізуємо потрібне <a> */
+/* пропис означає: у menu вибрати li тільки першого рівня і при :hover на ці li вибрати <a> тільки першого рівня (цей <a> з текстом Products */
+.menu>li:hover>a {
+    background: #2c71b8;
+    color: white;
+}
+
+.submenu :hover {
+    background-color: white;
+    color: #2c71b8;
+}
+
+.arrow-down {
+    position: absolute;
+    padding-top: 17px;
+}
+
+.arrow-down:hover {
+    background-color: #2c71b8;
+    color: white
 }
