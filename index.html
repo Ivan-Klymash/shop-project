@@ -17,11 +17,11 @@
     <header class="header">
         <!-- задача класу container розташувати рамки, зафіксувати все по центру (щоб шапка не йшла на всю ширину) : -->
         <div class="container">
-              <!--задача класу row відміняти обтікання бо далі ідуть колонки через float а він для них буде батьківський елемент  -->
+            <!--задача класу row відміняти обтікання бо далі ідуть колонки через float а він для них буде батьківський елемент  -->
             <div class="row">
                 <div class="col-md-3">
                     <div class="logo">
-                        <a href="" >
+                        <a href="">
                             <img src="images/logo (3).png" alt="">
                         </a>
                     </div>
@@ -33,17 +33,17 @@
                         <ul class="menu">
                             <li><a href="">Home 2</a></li>
                             <li><a href="" class="products">
-                                     Products2
-                                        <img class="arrow-down" src="images/arrow_down.png" alt="">
+                                    Products2
+                                    <img class="arrow-down" src="images/arrow_down.png" alt="">
                                 </a>
                                 <ul class="submenu">
-                                    <li>  laptop</li>
-                                    <li>  tablet</li>
-                                    <li>  cellphone</li>
+                                    <li> laptop</li>
+                                    <li> tablet</li>
+                                    <li> cellphone</li>
                                     <li> eBook</li>
-                                     <li>  TV</li>
-                                    <li>  earphones</li>
-                                    <li>  smart watch</li>
+                                    <li> TV</li>
+                                    <li> earphones</li>
+                                    <li> smart watch</li>
                                 </ul>
                             </li>
                             <li><a href="">Payment3</a></li>
@@ -72,7 +72,7 @@
         </div>
     </header>
 
-         <!--ЦЕНТРАЛЬНА ЧАСТИНА    -->
+    <!--ЦЕНТРАЛЬНА ЧАСТИНА    -->
     <main class="main">
         <div class="container">
             <div class="row">
@@ -100,49 +100,335 @@
                         <button class="main-button"> Submit</button>
                     </div>
                 </div>
-                    <div class="main-line main-line-home"> <a href=""> Home page</a></div>
-                    <div class="main-line main-line-products"> <a href=""> Products</a></div>
-                    <div class="main-line"> <a href=""> Laptops and Tablets</a></div>
-
-                <div class="main-title">Laptop and tablets</div>
                 <div class="main-col-md-9">
-                    <div class="col-md-3 devise">
-                        <div class="main-image">
-                             <img src="images/computer (17).png" alt="">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="breadcrumbs">
+                                <a href=""> Home page ></a>
+                                <a href=""> Products ></a>
+                                <span class="last-bredcrumbs"> Laptops and Tablets</span>
+                            </div>
                         </div>
-                     #1 Devise Name
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-                        <p>Type</p>
-                        <p>Size</p>
-                        <p>Ram</p>
                     </div>
-                    <div class="col-md-3 devise">
-                        <div class="main-image">
-                            <img src="images/device_1 (9).png" alt="">
-                       </div>
-                        #2 Devise Name
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-                        <p>Type</p>
-                        <p>Size</p>
-                        <p>Ram</p>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="main-title">Laptops and tablets</div>
+                        </div>
+                        <!-- 9колонок - 75%
+                                 xколонок - 33%
+                                x=33*9/75=3,96 - буде col-md-4 -->
+                        <div class="col-md-4">
+                            <ul class="device-sort">
+                                <li><a href="">sort by price</a>
+                                    <ul class="device-sort-submenu">
+                                        <li><a href=""> sort by name</a> </li>
+                                        <li><a href=""> sort by date</a> </li>
+                                        <li><a href=""> sort by popularity</a> </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- <select>
+                                <option value="">sort by name </option>
+                               <option value="">sort by date </option>
+                                <option value=""> sort by popularity</option>
+                            </select> -->
+                        </div>
                     </div>
-                    <div class="col-md-3 devise">
-                        <div class="main-image">
-                            <img src="images/watch_1 (10).png" alt="">
-                       </div>
-                        #3 Devise Name
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
-                        <p>Type</p>
-                        <p>Size</p>
-                        <p>Ram</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="device">
+                                <div class="device-image">
+                                    <img class="device-img" src="images/computer (17).png" alt="">
+                                    <div class="zoom"></div>
+                                    <div class="like"></div>
+                                </div>
+                                <div class="device-body">
+                                    <div class="device-title">#1 Devise Name</div>
+                                    <div class="device-description">
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                    <div class="device-features">
+                                        <nav>Type:
+                                            <span>Laptop</span>
+                                        </nav>
+                                        <nav>Size:
+                                            <span>7 inches</span>
+                                        </nav>
+                                        <nav> Ram:
+                                            <span>1GB</span>
+                                        </nav>
+                                    </div>
+                                    <div class="device-price">
+                                        <div class="device-price-dollar"> $599 </div>
+                                        <div class="device-price-cent"> 25 </div>
+                                    </div>
+                                    <button class="button-more">More details</button>
+                                    <button class="button-add">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="device">
+                                <div class="device-image">
+                                    <img class="device-img" src="images/device_1 (9).png" alt="">
+                                    <div class="zoom"></div>
+                                    <div class="like"></div>
+                                </div>
+                                <div class="device-body">
+                                    <div class="device-title">#1 Devise Name</div>
+                                    <div class="device-description">
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                    <div class="device-features">
+                                        <nav>Type:
+                                            <span>Laptop</span>
+                                        </nav>
+                                        <nav>Size:
+                                            <span>7 inches</span>
+                                        </nav>
+                                        <nav> Ram:
+                                            <span>1GB</span>
+                                        </nav>
+                                    </div>
+                                    <div class="device-price">
+                                        <div class="device-price-dollar"> $1250 </div>
+                                        <div class="device-price-cent"> 99 </div>
+                                    </div>
+                                    <button class="button-more">More details</button>
+                                    <button class="button-add">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="device">
+                                <div class="device-image">
+                                    <img class="device-img" src="images/watch_1 (10).png" alt="">
+                                    <div class="zoom"></div>
+                                    <div class="like"></div>
+                                </div>
+                                <div class="device-body">
+                                    <div class="device-title">#1 Devise Name</div>
+                                    <div class="device-description">
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                    <div class="device-features">
+                                        <nav>Type:
+                                            <span>Laptop</span>
+                                        </nav>
+                                        <nav>Size:
+                                            <span>7 inches</span>
+                                        </nav>
+                                        <nav> Ram:
+                                            <span>1GB</span>
+                                        </nav>
+                                    </div>
+                                    <div class="device-price">
+                                        <div class="device-price-dollar"> $399 </div>
+                                        <div class="device-price-cent"> 50 </div>
+                                    </div>
+                                    <button class="button-more">More details</button>
+                                    <button class="button-add">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="device">
+                                <div class="device-image">
+                                    <img class="device-img" src="images/laptop (16).png" alt="">
+                                    <div class="zoom"></div>
+                                    <div class="like"></div>
+                                </div>
+                                <div class="device-body">
+                                    <div class="device-title">#1 Devise Name</div>
+                                    <div class="device-description">
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                    <div class="device-features">
+                                        <nav>Type:
+                                            <span>Laptop</span>
+                                        </nav>
+                                        <nav>Size:
+                                            <span>7 inches</span>
+                                        </nav>
+                                        <nav> Ram:
+                                            <span>1GB</span>
+                                        </nav>
+                                    </div>
+                                    <div class="device-price">
+                                        <div class="device-price-dollar"> $599 </div>
+                                        <div class="device-price-cent"> 25 </div>
+                                    </div>
+                                    <button class="button-more">More details</button>
+                                    <button class="button-add">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="device">
+                                <div class="device-image">
+                                    <img class="device-img" src="images/mp3 player (14).png" alt="">
+                                    <div class="zoom"></div>
+                                    <div class="like"></div>
+                                </div>
+                                <div class="device-body">
+                                    <div class="device-title">#1 Devise Name</div>
+                                    <div class="device-description">
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                    <div class="device-features">
+                                        <nav>Type:
+                                            <span>Laptop</span>
+                                        </nav>
+                                        <nav>Size:
+                                            <span>7 inches</span>
+                                        </nav>
+                                        <nav> Ram:
+                                            <span>1GB</span>
+                                        </nav>
+                                    </div>
+                                    <div class="device-price">
+                                        <div class="device-price-dollar"> $1250 </div>
+                                        <div class="device-price-cent"> 99 </div>
+                                    </div>
+                                    <button class="button-more">More details</button>
+                                    <button class="button-add">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="device">
+                                <div class="device-image">
+                                    <img class="device-img" src="images/cellphone_1 (12).png" alt="">
+                                    <div class="zoom"></div>
+                                    <div class="like"></div>
+                                </div>
+                                <div class="device-body">
+                                    <div class="device-title">#1 Devise Name</div>
+                                    <div class="device-description">
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                    <div class="device-features">
+                                        <nav>Type:
+                                            <span>Laptop</span>
+                                        </nav>
+                                        <nav>Size:
+                                            <span>7 inches</span>
+                                        </nav>
+                                        <nav> Ram:
+                                            <span>1GB</span>
+                                        </nav>
+                                    </div>
+                                    <div class="device-price">
+                                        <div class="device-price-dollar"> $399 </div>
+                                        <div class="device-price-cent"> 50 </div>
+                                    </div>
+                                    <button class="button-more">More details</button>
+                                    <button class="button-add">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="device">
+                                <div class="device-image">
+                                    <img class="device-img" src="images/cellphone_2 (15).png" alt="">
+                                    <div class="zoom"></div>
+                                    <div class="like"></div>
+                                </div>
+                                <div class="device-body">
+                                    <div class="device-title">#1 Devise Name</div>
+                                    <div class="device-description">
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                    <div class="device-features">
+                                        <nav>Type:
+                                            <span>Laptop</span>
+                                        </nav>
+                                        <nav>Size:
+                                            <span>7 inches</span>
+                                        </nav>
+                                        <nav> Ram:
+                                            <span>1GB</span>
+                                        </nav>
+                                    </div>
+                                    <div class="device-price">
+                                        <div class="device-price-dollar"> $599 </div>
+                                        <div class="device-price-cent"> 25 </div>
+                                    </div>
+                                    <button class="button-more">More details</button>
+                                    <button class="button-add">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="device">
+                                <div class="device-image">
+                                    <img class="device-img" src="images/device_1 (9).png" alt="">
+                                    <div class="zoom"></div>
+                                    <div class="like"></div>
+                                </div>
+                                <div class="device-body">
+                                    <div class="device-title">#1 Devise Name</div>
+                                    <div class="device-description">
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                    <div class="device-features">
+                                        <nav>Type:
+                                            <span>Laptop</span>
+                                        </nav>
+                                        <nav>Size:
+                                            <span>7 inches</span>
+                                        </nav>
+                                        <nav> Ram:
+                                            <span>1GB</span>
+                                        </nav>
+                                    </div>
+                                    <div class="device-price">
+                                        <div class="device-price-dollar"> $1250 </div>
+                                        <div class="device-price-cent"> 99 </div>
+                                    </div>
+                                    <button class="button-more">More details</button>
+                                    <button class="button-add">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="device">
+                                <div class="device-image">
+                                    <img class="device-img" src="images/watch_1 (10).png" alt="">
+                                    <div class="zoom"></div>
+                                    <div class="like"></div>
+                                </div>
+                                <div class="device-body">
+                                    <div class="device-title">#1 Devise Name</div>
+                                    <div class="device-description">
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                    <div class="device-features">
+                                        <nav>Type:
+                                            <span>Laptop</span>
+                                        </nav>
+                                        <nav>Size:
+                                            <span>7 inches</span>
+                                        </nav>
+                                        <nav> Ram:
+                                            <span>1GB</span>
+                                        </nav>
+                                    </div>
+                                    <div class="device-price">
+                                        <div class="device-price-dollar"> $399 </div>
+                                        <div class="device-price-cent"> 50 </div>
+                                    </div>
+                                    <button class="button-more">More details</button>
+                                    <button class="button-add">Add to cart</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="more"> Load more ...</div>
                 </div>
             </div>
         </div>
-
     </main>
-
-
 
     <footer class="footer">footer</footer>
 </body>

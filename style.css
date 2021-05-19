@@ -15,10 +15,12 @@ body {
     */
 }
 
+    /* ШАПКА САЙТУ */
 .header {
     background-color: rgba(255, 255, 255, 0.75);
     /* задамо внутрішній відступ щоби header збільшити */
     padding: 25px;
+    height: 100px;
 }
 
 .container {
@@ -72,6 +74,7 @@ body {
     width: 25%;
     border-left: 1px solid #2c71b8;
     position: relative;
+    z-index: 100;
 }
 
 /* задамо рамку для останньої колонки li справа */
@@ -226,7 +229,6 @@ input::placeholder {
 }
 .navigation {
     height: 843px;
-    padding: 0px 15px;
     background-color: rgba(255, 255, 255, 0.2);
 }
 .characteristics {
@@ -272,50 +274,203 @@ input::placeholder {
     font-weight: bold;
     text-transform: uppercase;
 }
-
-.main-line a {
+.main-col-md-9 {
+    width: 75%;
+}
+.col-md-12 {
+    width: 100%;
+}
+.breadcrumbs {
+    float: left;
+    font-size: 14px;
+    font-weight: 300;
+    padding-top: 30px;
+}
+.breadcrumbs a {
     color: white;
     display: block;
     text-decoration: none;
     float: left;
-    font-size: 14px;
-    font-weight: 300;
-    padding: 30px 22px;
+    margin-left: 15px;
 }
-.main-line:nth-child(3) {
+.last-bredcrumbs {
 text-decoration: underline;
+margin-left: 15px;
 }
-.main-line-home a {
-    background-image: url(images/iconfinder_arrow_right2.png);
-    background-repeat: no-repeat;
-    background-position: 105px 30px;
-    color: white;
-}
-.main-line-products a {
-    background-image: url(images/iconfinder_arrow_right2.png);
-    background-repeat: no-repeat;
-    background-position: 85px 30px;
-    color: white;
+
+.col-md-8 {
+    width: 66.6%;
 }
 .main-title {
 font-size: 48px;
 font-weight: bold;
 padding-top: 38px;
 padding-left: 0px;
+margin-bottom: 20px;
 }
 
-.main-col-md-9 {
-    width: 75%;
+.col-md-4 {
+    width: 33.3%;
 }
-.devise {
+.device-sort {
+    padding-top: 48px;
+    position: relative;
+    background-image: url(images/arrow-down_211687.png);
+    background-repeat: no-repeat;
+    background-position: 240px 50px;
+}
+.device-sort li {
+    width: 268px;
+    height: 38px;
+    border: 1px solid white;
+    font-size: 21px;
+    font-weight: 100;
+    line-height: 38px;
+    background-color: #2c71b8;
+    margin-bottom: -1px;
+}
+.device-sort-submenu {
+    position: absolute;
+    z-index: 100;
+}
+.device-sort-submenu li:first-child {
+    margin-top: -1px;
+}
+.device-sort-submenu li:last-child {
+    margin-top: -2px;
+}
+.device-sort a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding-left: 19px;
+}
+/* для зміни фону при наведенні: */
+.device-sort-submenu a:hover{
+    background-color: white;
+    color: #2c71b8;
+}
+.device-sort a:hover{
+    background-color: white;
+    color: #2c71b8;
+}
+
+/* випадаюче меню: */
+.device-sort-submenu {
+    visibility: hidden;
+    opacity: 0;
+}
+.device-sort li:hover .device-sort-submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.device {
 height: 652px;
 width: 270px;
 border: 1px solid white;
-margin: 15px;
+margin-top: 30px;
 }
-.main-image {
+.device-image {
     background-color: rgba(255, 255, 255, 0.75);
     height: 180px;
-    width: 270px;
-    padding-left: 1px;
+    width: 268px;
+    position: relative;
+    /* Другий спосіб вирівнювання картинок горизонтально і вертикально по центру через flexbox (перший спосіб нижче) */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+.device-img {
+    /* вирівнювання картинок координатами позиціонування  */
+/* position: absolute;
+top: 45px;
+left:84px; */
+
+/* вирівнювання картинок горизонтально по центру */
+/* display: block;
+margin-left: auto;
+margin-right: auto; */
+
+/* вирівнювання картинок вертикально по центру */
+/* position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%); */
+
+/* вирівнювання картинок одночасно горизонтально і вертикально по центру */
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.device-body {
+    padding-left: 15px;
+}
+.device-title {
+    font-size: 30px;
+    font-weight: bold;
+    padding-top: 13px;
+}
+.device-description {
+    font-size: 21px;
+    font-weight: 300;
+    padding-top: 14px;
+}
+.device-features {
+    font-size: 21px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+.device-features nav {
+    text-transform: uppercase;
+    margin-top: 16px;
+}
+.device-features span {
+    font-size: 21px;
+    font-weight: 100;
+    text-transform: none;
+}
+
+.device-price {
+    font-size: 48px;
+    font-weight: bold;
+    padding-left: 46px;
+    padding-bottom: 24px;
+}
+.device-price-dollar {
+    display: inline-block;
+}
+.device-price-cent{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 24px;
+    font-weight: bold;
+}
+button {
+    width: 208px;
+    height: 48px;
+    margin-left: 14px;
+    font-size: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 40px;
+}
+.button-more {
+    margin-bottom: 15px;
+    background-color: #2c71b8;
+    color: white;
+    border: 1px solid white;
+}
+.button-add {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+}
+
+.more {
+    font-size: 36px;
+    font-weight: 100;
+    text-align: center;
+    margin-top: 39px;
+    margin-bottom: 90px;
 }
