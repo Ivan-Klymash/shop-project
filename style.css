@@ -132,7 +132,7 @@ input::placeholder {
     font-size: 21px;
 }
 
-.button {
+.button-search {
     width: 30px;
     height: 30px;
     background-color: #2c71b8;
@@ -171,6 +171,8 @@ input::placeholder {
     position: absolute;
     top: -10px;
     left: -10px;
+    font-size: 12px;
+    font-weight:400;
 }
 
 .menu li > .submenu li {
@@ -190,10 +192,11 @@ input::placeholder {
     opacity: 0;
 }
 
-.submenu li {
+.submenu a {
     color: white;
     font-size: 21px;
-    padding-left: 32px;
+    text-align: left;
+    padding-left: 23px;
 }
 
 .menu li:hover .submenu {
@@ -208,7 +211,7 @@ input::placeholder {
     color: white;
 }
 
-.submenu :hover {
+.submenu a:hover {
     background-color: white;
     color: #2c71b8;
 }
@@ -236,21 +239,21 @@ input::placeholder {
     font-weight: 600;
     text-transform: uppercase;
     padding-left: 30px;
-    padding-top: 33px;
+    padding-top: 28px;
 }
 .characteristics p {
     font-weight: 100;
     text-transform: none;
-    padding-top: 29px;
+    padding-top: 20px;
 }
 .ram p{
-    padding-top: 25px;
+    padding-top: 20px;
 }
 .characteristics:nth-child(2) {
-    padding-top: 65px;
+    padding-top: 59px;
 }
 .characteristics:nth-child(3) {
-    padding-top: 65px;
+    padding-top: 59px;
 }
 
 .more_options {
@@ -259,9 +262,15 @@ input::placeholder {
     text-decoration: none;
     font-size: 21px;
     font-weight: 100;
-    padding-top: 32px;
-    padding-bottom: 29px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    text-align: center;
 }
+.more_options:hover {
+    color: aqua;
+    text-decoration: underline;
+}
+
 .main-button {
     width: 211px;
     height: 50px;
@@ -269,11 +278,17 @@ input::placeholder {
     color: white;
     border: 1px solid white ;
     font-size: 21px;
-    padding-top: 16px;
     text-align:center;
+    line-height: 50px;
     font-weight: bold;
     text-transform: uppercase;
+    margin-left: 30px;
 }
+.main-button:hover {
+    background-color: white;
+    color: #2c71b8;
+}
+
 .main-col-md-9 {
     width: 75%;
 }
@@ -296,6 +311,10 @@ input::placeholder {
 .last-bredcrumbs {
 text-decoration: underline;
 margin-left: 15px;
+}
+.breadcrumbs a:hover {
+    color: aqua;
+    text-decoration: underline;
 }
 
 .col-md-8 {
@@ -403,6 +422,53 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 }
+.zoom {
+    background-image: url(images/resize\ blue\ \(8\).png);
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #2c71b8;
+    position:absolute;
+    top: 10px;
+   left: 230px;
+    background-position: center;
+
+}
+.like {
+   background-image: url(images/heart\ blue\ \(5\).png);
+   background-repeat: no-repeat;
+   height: 30px;
+   width: 30px;
+    border: 1px solid #2c71b8;
+   position: absolute;
+   top: 50px;
+   left: 230px;
+   background-position: center;
+
+}
+.zoom:hover {
+    background-image: url(images/resize\ white\ \(6\).png);
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-color: #2c71b8;
+    position:absolute;
+    top: 10px;
+   left: 230px;
+    background-position: center;
+}
+.like:hover {
+    background-image: url(images/heart\ white\ \(7\).png);
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    background-color: #2c71b8;
+    position:absolute;
+    top: 50px;
+   left: 230px;
+    background-position: center;
+}
+
 .device-body {
     padding-left: 15px;
 }
@@ -461,10 +527,18 @@ button {
     color: white;
     border: 1px solid white;
 }
+.button-more:hover {
+    background-color: white;
+    color: #2c71b8;
+}
 .button-add {
     background-color: rgba(255, 255, 255, 0.2);
     color: white;
     border: none;
+}
+.button-add:hover {
+    background-color: white;
+    color: #2c71b8;
 }
 
 .more {
@@ -472,5 +546,27 @@ button {
     font-weight: 100;
     text-align: center;
     margin-top: 39px;
-    margin-bottom: 90px;
+    margin-bottom: 80px;
+}
+.more a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+.more a:hover {
+    color: aqua;
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 25px;
+    height: 100px;
+}
+.copyright {
+    font-size: 21px;
+    font-weight: 100;
+    color: #2c71b8;
+    text-align: center;
+    line-height: 50px;
 }
