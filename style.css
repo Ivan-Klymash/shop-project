@@ -48,7 +48,7 @@ body {
 }
 
 .col-md-9 {
-    width: 230px;
+    width: 75%;
 }
 
 /* Напишемо правило: якщо зустрінеться class з атрибутом col- то задати float-left, padding-left і padding-right   */
@@ -144,7 +144,7 @@ input::placeholder {
     margin: 4px;
     position: absolute;
     top: -1px;
-    left: 161px;
+    left: 156px;
 }
 
 .cart {
@@ -155,10 +155,17 @@ input::placeholder {
     background-repeat: no-repeat;
     background-position: 10px 10px;
     position: relative;
-    margin-left: 230px;
-    bottom: 40px;
+    top: 2px;
+    right: 9px;
     border: none;
 }
+.cart:hover {
+background-image: url(images/cart\ white\ \(2\).png);
+background-repeat: no-repeat;
+background-color: #2c71b8;
+color: red;
+}
+
 
 .product-count {
     width: 20px;
@@ -177,7 +184,7 @@ input::placeholder {
 
 .menu li > .submenu li {
     width: 286px;
-    height: 40px;
+    height: 50px;
     line-height: 40px;
     position: relative;
   }
@@ -246,6 +253,11 @@ input::placeholder {
     text-transform: none;
     padding-top: 20px;
 }
+.characteristics-device {
+    font-weight: 100;
+    text-transform: none;
+    padding-top: 20px;
+}
 .ram p{
     padding-top: 20px;
 }
@@ -254,6 +266,30 @@ input::placeholder {
 }
 .characteristics:nth-child(3) {
     padding-top: 59px;
+}
+/* стилізація checkbox */
+input[type="checkbox"]:checked + label::before{
+    background-color: white;
+}
+input[type="checkbox"] {
+     display: none;
+}
+label {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+}
+
+label::before{
+    content: "";
+    cursor: pointer;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    position: absolute;
+    top: 5px;
+    left: 0px;
 }
 
 .more_options {
@@ -334,9 +370,12 @@ margin-bottom: 20px;
 .device-sort {
     padding-top: 48px;
     position: relative;
+}
+.device-sort>li {
     background-image: url(images/arrow-down_211687.png);
     background-repeat: no-repeat;
-    background-position: 240px 50px;
+    background-position: 230px 7px;
+    z-index: 101;
 }
 .device-sort li {
     width: 268px;
@@ -369,10 +408,14 @@ margin-bottom: 20px;
     background-color: white;
     color: #2c71b8;
 }
-.device-sort a:hover{
+.device-sort>li>a:hover{
     background-color: white;
     color: #2c71b8;
+    background-image: url(images/arrow-down_211687.png);
+    background-repeat: no-repeat;
+    background-position: 230px 7px;
 }
+
 
 /* випадаюче меню: */
 .device-sort-submenu {
@@ -535,12 +578,33 @@ button {
     background-color: rgba(255, 255, 255, 0.2);
     color: white;
     border: none;
+    position: relative;
 }
 .button-add:hover {
     background-color: white;
     color: #2c71b8;
 }
+.button-cart {
+    background-image: url(images/cart\ white\ \(2\).png);
+   background-repeat: no-repeat;
+   height: 30px;
+   width: 30px;
+   position: absolute;
+   top: 9px;
+   left: 178px;
+   background-position: center;
+}
 
+.button-add:hover .button-cart {
+    background-image: url(images/cart\ blue\ \(1\).png);
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    position:absolute;
+    top: 9px;
+    left: 178px;
+    background-position: center;
+}
 .more {
     font-size: 36px;
     font-weight: 100;

@@ -78,22 +78,62 @@
                 <div class="col-md-3">
                     <div class="navigation">
                         <div class="characteristics"> Device type
-                            <p><input type="checkbox" name="device" value="Laptop">Laptop</p>
-                            <p><input type="checkbox" name="device" value="Tablet">Tablet</p>
+                            <div class="characteristics-device">
+                                <input type="checkbox" id="type_laptop" name="device" value="Laptop">
+                                <label for="type_laptop">Laptop</label>
+                            </div>
+                            <div class="characteristics-device">
+                                <input type="checkbox" id="type_tablet" name="device" value="Tablet">
+                                <label for="type_tablet">Tablet</label>
+                            </div>
                         </div>
+
                         <div class="characteristics"> Color
-                            <p><input type="checkbox" name="color" value="black">Black</p>
-                            <p><input type="checkbox" name="color" value="red">Red</p>
-                            <p><input type="checkbox" name="color" value="green">Green</p>
-                            <p><input type="checkbox" name="color" value="blue">Blue</p>
-                            <p><input type="checkbox" name="color" value="orange">Orange</p>
+                            <div class="characteristics-device">
+                                <input type="checkbox" id="black" name="color" value="black">
+                                <label for="black">Black</label>
+                            </div>
+
+                            <div class="characteristics-device">
+                                <input type="checkbox" id="red" name="color" value="red">
+                                <label for="red">Red</label>
+                            </div>
+                            <div class="characteristics-device">
+                                <input type="checkbox" id="green" name="color" value="green">
+                                <label for="green">Green</label>
+                            </div>
+
+                            <div class="characteristics-device">
+                                <input type="checkbox" id="blue" name="color" value="blue">
+                                <label for="blue">Blue</label>
+                            </div>
+
+                            <div class="characteristics-device">
+                                <input type="checkbox" id="orange" name="color" value="orange">
+                                <label for="orange">Orange</label>
+                            </div>
                         </div>
                         <div class="characteristics ram"> Ram
-                            <p><input type="checkbox" name="ram" value="1GB">1GB</p>
-                            <p><input type="checkbox" name="ram" value="2GB">2GB</p>
-                            <p><input type="checkbox" name="ram" value="4GB">4GB</p>
-                            <p><input type="checkbox" name="ram" value="6GB">6GB</p>
-                            <p><input type="checkbox" name="ram" value="8GB">8GB</p>
+                            <div class="characteristics-device">
+                                <input type="checkbox" id="ram1GB" name="ram" value="1GB">
+                                <label for="ram1GB">1GB</label>
+                            </div>
+                            <div class="characteristics-device">
+                                <input type="checkbox" id="ram2GB" name="ram" value="2GB">
+                                <label for="ram2GB">2GB</label>
+                            </div>
+                            <div class="characteristics-device">
+                                <input type="checkbox" id="ram4GB" name="ram" value="4GB">
+                                <label for="ram4GB">4GB</label>
+                            </div>
+                            <div class="characteristics-device">
+                                <input type="checkbox" id="ram6GB" name="ram" value="6GB">
+                                <label for="ram6GB">6GB</label>
+                            </div>
+                            <div class="characteristics-device">
+                                <input type="checkbox" id="ram8GB" name="ram" value="8GB">
+                                <label for="ram8GB">8GB</label>
+                            </div>
                         </div>
                         <div><a class="more_options" href=""> Show more options... </a></div>
                         <button class="main-button"> Submit</button>
@@ -126,13 +166,9 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <!-- <select>
-                                <option value="">sort by name </option>
-                               <option value="">sort by date </option>
-                                <option value=""> sort by popularity</option>
-                            </select> -->
                         </div>
                     </div>
+
                     <div class="row">
                         <div class="col-md-4">
                             <div class="device">
@@ -162,7 +198,9 @@
                                         <div class="device-price-cent"> 25 </div>
                                     </div>
                                     <button class="button-more">More details</button>
-                                    <button class="button-add">Add to cart</button>
+                                    <button class="button-add">Add to cart
+                                        <div class="button-cart"></div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -194,7 +232,9 @@
                                         <div class="device-price-cent"> 99 </div>
                                     </div>
                                     <button class="button-more">More details</button>
-                                    <button class="button-add">Add to cart</button>
+                                    <button class="button-add">Add to cart
+                                        <div class="button-cart"></div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -226,7 +266,9 @@
                                         <div class="device-price-cent"> 50 </div>
                                     </div>
                                     <button class="button-more">More details</button>
-                                    <button class="button-add">Add to cart</button>
+                                    <button class="button-add">Add to cart
+                                        <div class="button-cart"></div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -258,7 +300,9 @@
                                         <div class="device-price-cent"> 25 </div>
                                     </div>
                                     <button class="button-more">More details</button>
-                                    <button class="button-add">Add to cart</button>
+                                    <button class="button-add">Add to cart
+                                        <div class="button-cart"></div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -290,7 +334,9 @@
                                         <div class="device-price-cent"> 99 </div>
                                     </div>
                                     <button class="button-more">More details</button>
-                                    <button class="button-add">Add to cart</button>
+                                    <button class="button-add">Add to cart
+                                        <div class="button-cart"></div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -322,7 +368,9 @@
                                         <div class="device-price-cent"> 50 </div>
                                     </div>
                                     <button class="button-more">More details</button>
-                                    <button class="button-add">Add to cart</button>
+                                    <button class="button-add">Add to cart
+                                        <div class="button-cart"></div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -354,7 +402,9 @@
                                         <div class="device-price-cent"> 25 </div>
                                     </div>
                                     <button class="button-more">More details</button>
-                                    <button class="button-add">Add to cart</button>
+                                    <button class="button-add">Add to cart
+                                        <div class="button-cart"></div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -386,7 +436,9 @@
                                         <div class="device-price-cent"> 99 </div>
                                     </div>
                                     <button class="button-more">More details</button>
-                                    <button class="button-add">Add to cart</button>
+                                    <button class="button-add">Add to cart
+                                        <div class="button-cart"></div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -418,7 +470,9 @@
                                         <div class="device-price-cent"> 50 </div>
                                     </div>
                                     <button class="button-more">More details</button>
-                                    <button class="button-add">Add to cart</button>
+                                    <button class="button-add">Add to cart
+                                        <div class="button-cart"></div>
+                                    </button>
                                 </div>
                             </div>
                         </div>
