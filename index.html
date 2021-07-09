@@ -6,10 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
+
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
     <link rel="stylesheet" href="style.css">
     <title>Shop project</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;250;300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -62,7 +66,7 @@
                         </div>
                         <div class="col-md-3">
                             <button class="cart">
-                                <div class="product-count">0</div>
+                                <div class="product-count" id="products-count">0</div>
                             </button>
                         </div>
                     </div>
@@ -71,8 +75,21 @@
         </div>
     </header>
 
+
     <!--ЦЕНТРАЛЬНА ЧАСТИНА    -->
     <main class="main">
+        <div class="container">
+            <!-- Слайдер -->
+            <div class="row">
+                <div class="slider-block">
+                    <div>Slide # 1</div>
+                    <div>Slide # 2</div>
+                    <div>Slide # 3</div>
+                    <div>Slide # 4</div>
+                  </div>
+            </div>
+        </div>
+            <hr>
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
@@ -154,8 +171,8 @@
                             <div class="main-title">Laptops and tablets</div>
                         </div>
                         <!-- 9колонок - 75%
-                                 xколонок - 33%
-                                x=33*9/75=3,96 - буде col-md-4 -->
+                             xколонок - 33%
+                            x=33*9/75=3,96 - буде col-md-4 -->
                         <div class="col-md-4">
                             <ul class="device-sort">
                                 <li><a href="">sort by price</a>
@@ -197,6 +214,14 @@
                                         <div class="device-price-dollar"> $599 </div>
                                         <div class="device-price-cent"> 25 </div>
                                     </div>
+
+                                    <div class="product-quantity">
+                                        <input type="button" value="-" class="decrement-button">
+                                        <input type="text" value="1"class="product-quantity-input" readonly>
+                                        <!-- задаємо атрибут readonly і користувач нічого самостійно в це поле input ввести не зможе а тільки клікаючи кнопками + і - будуть у цьому полі змінюватись значенн -->
+                                        <input type="button" value="+" class="increment-button">
+                                    </div>
+
                                     <button class="button-more">More details</button>
                                     <button class="button-add">Add to cart
                                         <div class="button-cart"></div>
@@ -212,7 +237,7 @@
                                     <div class="like"></div>
                                 </div>
                                 <div class="device-body">
-                                    <div class="device-title">#1 Devise Name</div>
+                                    <div class="device-title">#2 Devise Name</div>
                                     <div class="device-description">
                                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
                                     </div>
@@ -230,6 +255,12 @@
                                     <div class="device-price">
                                         <div class="device-price-dollar"> $1250 </div>
                                         <div class="device-price-cent"> 99 </div>
+                                        <!-- правильніше <p><span>$1250 <sup>99</sup></span></p> -->
+                                    </div>
+                                    <div class="product-quantity">
+                                        <input type="button" value="-" class="decrement-button">
+                                        <input type="text" value="1"class="product-quantity-input" readonly>
+                                        <input type="button" value="+" class="increment-button">
                                     </div>
                                     <button class="button-more">More details</button>
                                     <button class="button-add">Add to cart
@@ -246,7 +277,7 @@
                                     <div class="like"></div>
                                 </div>
                                 <div class="device-body">
-                                    <div class="device-title">#1 Devise Name</div>
+                                    <div class="device-title">#3 Devise Name</div>
                                     <div class="device-description">
                                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
                                     </div>
@@ -264,6 +295,11 @@
                                     <div class="device-price">
                                         <div class="device-price-dollar"> $399 </div>
                                         <div class="device-price-cent"> 50 </div>
+                                    </div>
+                                    <div class="product-quantity">
+                                        <input type="button" value="-" class="decrement-button">
+                                        <input type="text" value="1"class="product-quantity-input" readonly>
+                                        <input type="button" value="+" class="increment-button">
                                     </div>
                                     <button class="button-more">More details</button>
                                     <button class="button-add">Add to cart
@@ -299,6 +335,11 @@
                                         <div class="device-price-dollar"> $599 </div>
                                         <div class="device-price-cent"> 25 </div>
                                     </div>
+                                    <div class="product-quantity">
+                                        <input type="button" value="-" class="decrement-button">
+                                        <input type="text" value="1"class="product-quantity-input" readonly>
+                                        <input type="button" value="+" class="increment-button">
+                                    </div>
                                     <button class="button-more">More details</button>
                                     <button class="button-add">Add to cart
                                         <div class="button-cart"></div>
@@ -311,10 +352,10 @@
                                 <div class="device-image">
                                     <img class="device-img" src="images/mp3 player (14).png" alt="">
                                     <div class="zoom"></div>
-                                    <div class="like"></div>
+                                    <div class="like liked"></div>
                                 </div>
                                 <div class="device-body">
-                                    <div class="device-title">#1 Devise Name</div>
+                                    <div class="device-title">#2 Devise Name</div>
                                     <div class="device-description">
                                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
                                     </div>
@@ -333,6 +374,11 @@
                                         <div class="device-price-dollar"> $1250 </div>
                                         <div class="device-price-cent"> 99 </div>
                                     </div>
+                                    <div class="product-quantity">
+                                        <input type="button" value="-" class="decrement-button">
+                                        <input type="text" value="1"class="product-quantity-input" readonly>
+                                        <input type="button" value="+" class="increment-button">
+                                    </div>
                                     <button class="button-more">More details</button>
                                     <button class="button-add">Add to cart
                                         <div class="button-cart"></div>
@@ -348,7 +394,7 @@
                                     <div class="like"></div>
                                 </div>
                                 <div class="device-body">
-                                    <div class="device-title">#1 Devise Name</div>
+                                    <div class="device-title">#3 Devise Name</div>
                                     <div class="device-description">
                                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
                                     </div>
@@ -366,6 +412,11 @@
                                     <div class="device-price">
                                         <div class="device-price-dollar"> $399 </div>
                                         <div class="device-price-cent"> 50 </div>
+                                    </div>
+                                    <div class="product-quantity">
+                                        <input type="button" value="-" class="decrement-button">
+                                        <input type="text" value="1"class="product-quantity-input" readonly>
+                                        <input type="button" value="+" class="increment-button">
                                     </div>
                                     <button class="button-more">More details</button>
                                     <button class="button-add">Add to cart
@@ -401,6 +452,11 @@
                                         <div class="device-price-dollar"> $599 </div>
                                         <div class="device-price-cent"> 25 </div>
                                     </div>
+                                    <div class="product-quantity">
+                                        <input type="button" value="-" class="decrement-button">
+                                        <input type="text" value="1"class="product-quantity-input" readonly>
+                                        <input type="button" value="+" class="increment-button">
+                                    </div>
                                     <button class="button-more">More details</button>
                                     <button class="button-add">Add to cart
                                         <div class="button-cart"></div>
@@ -416,7 +472,7 @@
                                     <div class="like"></div>
                                 </div>
                                 <div class="device-body">
-                                    <div class="device-title">#1 Devise Name</div>
+                                    <div class="device-title">#2 Devise Name</div>
                                     <div class="device-description">
                                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
                                     </div>
@@ -435,6 +491,11 @@
                                         <div class="device-price-dollar"> $1250 </div>
                                         <div class="device-price-cent"> 99 </div>
                                     </div>
+                                    <div class="product-quantity">
+                                        <input type="button" value="-" class="decrement-button">
+                                        <input type="text" value="1"class="product-quantity-input" readonly>
+                                        <input type="button" value="+" class="increment-button">
+                                    </div>
                                     <button class="button-more">More details</button>
                                     <button class="button-add">Add to cart
                                         <div class="button-cart"></div>
@@ -450,7 +511,7 @@
                                     <div class="like"></div>
                                 </div>
                                 <div class="device-body">
-                                    <div class="device-title">#1 Devise Name</div>
+                                    <div class="device-title"># De3vise Name</div>
                                     <div class="device-description">
                                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
                                     </div>
@@ -469,6 +530,11 @@
                                         <div class="device-price-dollar"> $399 </div>
                                         <div class="device-price-cent"> 50 </div>
                                     </div>
+                                    <div class="product-quantity">
+                                        <input type="button" value="-" class="decrement-button">
+                                        <input type="text" value="1"class="product-quantity-input" readonly>
+                                        <input type="button" value="+" class="increment-button">
+                                    </div>
                                     <button class="button-more">More details</button>
                                     <button class="button-add">Add to cart
                                         <div class="button-cart"></div>
@@ -483,9 +549,32 @@
         </div>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
-        <div class="copyright">Copyright 2021</div>
+        <div class="copyright">© Copyright 2021</div>
     </footer>
+
+    <div class="modal">
+        <div class="modal-block">
+            <form>
+                <div class="btn-close">X</div>
+                <h3>Please call for more details</h3>
+                <div class="form-fields">
+                    <input type="text" placeholder="Your name">
+                </div>
+                <div class="form-fields">
+                    <input type="text" placeholder="Your phone">
+                </div>
+                <button class="form-button">Please call</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <script src="app.js"></script>
 </body>
 
 </html>

@@ -225,6 +225,7 @@ background-color: #2c71b8;
 .arrow-down {
     position: absolute;
     padding-top: 17px;
+    right: 9px;
 }
 
 .arrow-down:hover {
@@ -277,6 +278,7 @@ label {
     display: block;
     position: relative;
     padding-left: 20px;
+    cursor: pointer;
 }
 
 label::before{
@@ -371,9 +373,9 @@ margin-bottom: 20px;
     position: relative;
 }
 .device-sort>li {
-    background-image: url(images/arrow-down_211687.png);
+    background-image: url(images/outline_keyboard_arrow_down_white_24dp.png);
     background-repeat: no-repeat;
-    background-position: 230px 7px;
+    background-position: 230px 6px;
     z-index: 101;
 }
 .device-sort li {
@@ -410,9 +412,6 @@ margin-bottom: 20px;
 .device-sort>li>a:hover{
     background-color: white;
     color: #2c71b8;
-    background-image: url(images/arrow-down_211687.png);
-    background-repeat: no-repeat;
-    background-position: 230px 7px;
 }
 
 
@@ -499,7 +498,7 @@ transform: translate(-50%, -50%);
    left: 230px;
     background-position: center;
 }
-.like:hover {
+.like:hover, .liked {
     background-image: url(images/heart\ white\ \(7\).png);
     background-repeat: no-repeat;
     height: 30px;
@@ -632,4 +631,124 @@ button {
     color: #2c71b8;
     text-align: center;
     line-height: 50px;
+}
+
+
+
+
+
+/* стилі для модального вікна форми */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.55);
+    /* за замовчуванням це модальне вікно має бути сховане (при кліку на кнопку More Details має появлятись) */
+    display: none;
+}
+.modal-block {
+    width: 300px;
+    height: 200px;
+    background-color: white;
+    border:1px solid grey;
+    padding: 15px;
+    margin: 80px auto;
+}
+
+.form-fields {
+    margin: 10px 0;
+}
+.form-fields input {
+    width: 100%;
+    height: 30px;
+}
+.btn-close {
+    text-align: right;
+    cursor: pointer;
+}
+
+.form-button {
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 40px;
+    color: white;
+    background-color: #2c71b8;
+    border: 1px solid white;
+    border-radius: 2px;
+    margin-left: 30px;
+}
+.form-button:hover {
+    background-color: wheat;
+    color: #2c71b8;
+}
+
+/* пропишемо 2 класи для того щоб використати їх у JS для виведення і приховання форми */
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+
+
+/* стилізуємо слайдер */
+.slider-block>div {
+    font-size: 100px;
+    line-height: 40px;
+    font-weight: 300;
+    text-align: center;
+    color: #ffffff;
+    padding: 165px 0px 162px;
+}
+
+.slick-dots li.slick-active button {
+    background-color: white;
+}
+.slick-dots li button:before {
+    content: none;
+}
+
+.slick-dots li button {
+    border: 1px solid white;
+    width: 10px;
+    height: 10px;
+}
+
+.slick-dots li {
+    padding-bottom: 28px;
+    padding-right: 20px;
+}
+
+.slick-prev:before {
+    content: url(images/outline_arrow_back_ios_white_48dp.png);
+}
+.slick-next:before {
+    content: url(images/outline_arrow_forward_ios_white_48dp.png);
+}
+
+.slick-slide {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 100px;
+    letter-spacing: 10px;
+    line-height: 40px;
+    font-weight: 250;
+}
+
+.slick-prev {
+    left: 0px;
+    height: 40px;
+}
+.slick-next {
+    right: 28px;
+    height: 40px
+}
+
+hr {
+    margin: 0;
 }
